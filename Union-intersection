@@ -1,0 +1,73 @@
+# union
+
+def createList(num1):
+    for n in range(num1):
+        numbers1 = int(input("Enter any number:"))
+        l1.append(numbers1)
+
+l1 =[]
+num1 = int(input("Enter size of list 1:"))
+createList(num1)
+
+l2 =[]
+num2 = int(input("Enter size of list 2:"))
+createList(num2)
+
+Union =[]
+
+def union(l1,l2):
+
+    final_list = l1+l2
+    print(final_list)
+
+    for i in range(len(final_list)):
+        for j in range(len(final_list)):
+            if final_list[i]==final_list[j]:
+                continue
+            else:
+                if final_list[i] in Union:
+                    pass
+                else:
+                    Union.append(final_list[i])
+                    break
+
+    return Union
+
+print(union(l1,l2))                
+
+# intersection 
+
+def createList(num1,l):
+    for n in range (num1):
+        numbers1 =int(input("Enter any number:"))
+        l.append(numbers1)
+
+l1 = []
+num1 = int(input("enter size of list 1:"))
+createList(num1,l1)
+
+l2 = []
+num2 = int(input("Enter size of list 2:"))
+createList(num2,l2)
+
+union = []
+
+def intersection(list1,list2):
+    intersection = []
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            if list1[i]!=list2[j]:
+                continue
+            else:
+                if list1[i] in intersection:
+                    pass
+                else:
+                    intersection.append(list1[i])
+                    break
+
+    return intersection
+
+print(l1," ",l2)
+
+print(intersection(l1,l2))
+            
